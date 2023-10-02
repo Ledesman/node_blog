@@ -1,0 +1,16 @@
+<%- include('parcials/header'); -%>
+
+<div class="container">
+<h5>Mi Blog</h5>
+    <p class="mb-5">Aqui encontraras todas mis entradas</p>
+
+    <%for (let i=0; i< TodasLasEntradas.length; i++){ %>
+   <% let posActual = TodasLasEntradas[i] %>
+
+    <h5><%=posActual.fecha %>.</h5>
+    <h1><%=posActual.titulo %>.</h1>
+    <p style="margin-bottom: 50px;"><%=posActual.contenido %>.</p>
+ <% } %>
+</div>
+
+<%- include('parcials/footer'); -%>

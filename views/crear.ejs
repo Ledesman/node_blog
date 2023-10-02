@@ -1,0 +1,30 @@
+<%- include('parcials/header'); -%>
+
+<div style="background-color: black; color:white;">
+<h5>Crear</h5>
+    <p>Pàgina de home</p>
+</div>
+<div class="container my-5">
+    <p>Ingresa aqui tus entradas</p>
+
+    <p class="mb-5"><%= fecha %></p>
+
+
+<form action="/crear" method="post">
+      <div class=" mb-3">
+        <label for="titulo" class="form-label" >Titulo</label>
+        <input type="text" placeholder="Titulo.." class="form-control" id="titulo" name="titulo">
+      </div>
+      <div class="form-floating mb-3 ">
+        <label class="form-check-label" for="floatTextarea">Contenido</label> 
+        <textarea placeholder="Contenido..." class="form-control" id="floatTextarea" name="contenido" style="height: 100px;"></textarea>
+       
+      </div>
+<!-- Imput feha-->
+      <input type="text" readonly value="<%= fecha %>" name="fechaEntrada" style="display: none;">
+      <button type="submit" class="btn btn-primary">Subir entrada</button>
+</form>
+
+</div>
+
+<%- include('parcials/footer'); -%>
